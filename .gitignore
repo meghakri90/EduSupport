@@ -1,0 +1,21 @@
+# React
+edusupport-ui/node_modules/
+edusupport-ui/dist/
+
+# ASP.NET Core
+EduSupport.Api/bin/
+EduSupport.Api/obj/
+EduSupport.Api/.vs/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Environment / secrets
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db

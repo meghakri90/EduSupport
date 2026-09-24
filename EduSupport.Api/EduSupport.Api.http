@@ -1,0 +1,39 @@
+@EduSupport_Api_HostAddress = https://localhost:7216
+
+GET {{EduSupport_Api_HostAddress}}/api/Tickets
+Accept: application/json
+
+### Get Users
+GET https://localhost:7216/api/Users
+Accept: application/json
+
+### Get Categories
+GET https://localhost:7216/api/Categories
+Accept: application/json
+
+### Create Ticket
+
+POST {{EduSupport_Api_HostAddress}}/api/Tickets
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "categoryId": 1,
+  "subject": "Unable to download fee receipt",
+  "description": "I paid my semester fee but I cannot download the receipt.",
+  "priority": "High",
+  "assignedToId": null
+}
+
+### Assign Ticket to Staff
+PATCH https://localhost:7216/api/Tickets/1/assign
+Content-Type: application/json
+
+{
+  "staffId": 2,
+  "assignedById": 3
+}
+
+### Manager Dashboard Summary
+GET https://localhost:7216/api/Dashboard/summary
+Accept: application/json
